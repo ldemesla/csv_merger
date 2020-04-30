@@ -1,0 +1,24 @@
+# This is where you define the foramt of the outputed csv file, each row describe one column, the first 
+# string is the name of the column in the outputed csv, all of the others string are synonyms of the column,
+# which mean that every data contained in a column named by a synonyme will be append there. The last
+# row is the key row, the first string is a primary key, each entry that contain the same primary key
+# will be considered as one and merged according to the priority defined by the order of the arguments.
+# If here is synonyme asociated in the column above the key, they will be also taken into account. All
+# the others key are secondary key, which mean that if two entry share in that column share more than
+# 80% correspondence they will be merged also, the same rules apply than primary key for synonymes.
+
+
+siret;Numro denregistrement (Siret, Siren)
+nom_etablissement;nom;Nom de lentreprise
+adresse;Rue
+code_ape
+code_postal;Code postal
+commune;ville
+pays
+Email
+employes;Nombre d'employes;Effectif entreprise
+ca;Chiffre daffaires brut
+telephone;Numro de tlphone
+web;Site web
+
+key;siret;nom_etablissement
